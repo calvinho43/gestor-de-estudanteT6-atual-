@@ -45,6 +45,7 @@
             this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.EnviarFoto = new System.Windows.Forms.Button();
             this.groupBoxGenero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).BeginInit();
             this.SuspendLayout();
@@ -211,12 +212,25 @@
             this.buttonCancelar.TabIndex = 20;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // EnviarFoto
+            // 
+            this.EnviarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnviarFoto.Location = new System.Drawing.Point(87, 507);
+            this.EnviarFoto.Name = "EnviarFoto";
+            this.EnviarFoto.Size = new System.Drawing.Size(122, 51);
+            this.EnviarFoto.TabIndex = 21;
+            this.EnviarFoto.Text = "Enviar foto";
+            this.EnviarFoto.UseVisualStyleBackColor = true;
+            this.EnviarFoto.Click += new System.EventHandler(this.EnviarFoto_Click);
             // 
             // FormInseirEstudante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 664);
+            this.Controls.Add(this.EnviarFoto);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.pictureBoxUsuario);
@@ -261,5 +275,6 @@
         private System.Windows.Forms.PictureBox pictureBoxUsuario;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Button EnviarFoto;
     }
 }
