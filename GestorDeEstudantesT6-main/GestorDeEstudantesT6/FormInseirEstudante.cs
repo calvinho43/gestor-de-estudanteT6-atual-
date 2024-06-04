@@ -47,12 +47,49 @@ namespace GestorDeEstudantesT6
             Close();
         }
 
+        bool Verificar()
+        {
+            if ((textBoxNome.Text.Trim()=="") ||
+                (textBoxSobrenome.Text.Trim()=="") ||
+                (textBoxTelefone.Text.Trim()=="") ||
+                (textBoxEndereco.Text.Trim()=="") ||
+                (pictureBoxUsuario.Image == null))
+                
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+     
         private void EnviarFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog selecionarImagem = new OpenFileDialog();
 
             selecionarImagem.Filter = "selecione a foto(*.jpg;*.png;*.gif)|";
-            selecionarImagem.ShowDialog();
+            if (selecionarImagem.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxUsuario.Image = Image.FromFile(selecionarImagem.FileName);
+            }
         }
-    }
-}
+
+        private void buttonCadastrar_Click(object sender, EventArgs e)
+        {
+            Estudante estudante = new Estudante();
+            string nome = textBoxNome.Text;
+            string sobrenome = textBoxSobrenome.Text;
+            DateTime nascimento = dateTimePicker1.Value;
+            string telefone = textBoxTelefone.Text;
+            string endereco = textBoxEndereco.Text;
+            string genero = "Feminino";
+
+        }
+
+        
+
+
+
+
+            
