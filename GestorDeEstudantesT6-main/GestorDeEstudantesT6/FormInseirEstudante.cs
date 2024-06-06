@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,12 +50,12 @@ namespace GestorDeEstudantesT6
 
         bool Verificar()
         {
-            if ((textBoxNome.Text.Trim()=="") ||
-                (textBoxSobrenome.Text.Trim()=="") ||
-                (textBoxTelefone.Text.Trim()=="") ||
-                (textBoxEndereco.Text.Trim()=="") ||
+            if ((textBoxNome.Text.Trim() == "") ||
+                (textBoxSobrenome.Text.Trim() == "") ||
+                (textBoxTelefone.Text.Trim() == "") ||
+                (textBoxEndereco.Text.Trim() == "") ||
                 (pictureBoxUsuario.Image == null))
-                
+
             {
                 return false;
             }
@@ -63,7 +64,7 @@ namespace GestorDeEstudantesT6
                 return true;
             }
         }
-     
+
         private void EnviarFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog selecionarImagem = new OpenFileDialog();
@@ -80,12 +81,42 @@ namespace GestorDeEstudantesT6
             Estudante estudante = new Estudante();
             string nome = textBoxNome.Text;
             string sobrenome = textBoxSobrenome.Text;
-            DateTime nascimento = dateTimePicker1.Value;
+            DateTime nascimento = dateTimePickerNascimento.Value;
             string telefone = textBoxTelefone.Text;
             string endereco = textBoxEndereco.Text;
             string genero = "Feminino";
 
+            if(radioButtonMasc.Checked)
+            {
+                genero = "Masculino";
+            }
+            MemoryStream foto = new MemoryStream();
+
+            int anoDeNascimento = dateTimePickerNascimento.Value.Year;
+            int anoAtual = DateTime.Now.Year;
+
+            if(((anoAtual - anoDeNascimento) < 10)|| ((anoAtual - anoDeNascimento) > 100))
+            {
+                MessageBox.Show("Precisa ter entre 10 e 100 anos",
+                    "Idade inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (Verificar())
+            {
+                pictureBoxUsuario.Image.Save(foto, pictureBoxUsuario.Image.RawFormat);
+                if (estudante.inserirEstudante(nome, sobrenome, nascimento, genero, telefone, endereco, foto))
+                {
+                    MessageBox.Show("Novo aluno cadastrado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Aluno não cadastrado", "Falha!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
+    }
+
+}
+
 
         
 
