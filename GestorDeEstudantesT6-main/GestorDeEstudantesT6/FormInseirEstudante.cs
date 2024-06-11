@@ -112,6 +112,11 @@ namespace GestorDeEstudantesT6
                     MessageBox.Show("Aluno não cadastrado", "Falha!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            else
+            {
+                MessageBox.Show("Campos não preenchidos!!", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 

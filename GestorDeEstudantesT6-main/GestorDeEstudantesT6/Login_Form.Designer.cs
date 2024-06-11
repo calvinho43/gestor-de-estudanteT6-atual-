@@ -95,6 +95,7 @@
             this.textBoxSenha.Size = new System.Drawing.Size(163, 20);
             this.textBoxSenha.TabIndex = 5;
             this.textBoxSenha.UseSystemPasswordChar = true;
+            this.textBoxSenha.WordWrap = false;
             // 
             // buttonLogin
             // 
