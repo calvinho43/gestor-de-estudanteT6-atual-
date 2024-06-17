@@ -80,6 +80,9 @@
     <EmbeddedResource Include="FormInseirEstudante.resx">
       <DependentUpon>FormInseirEstudante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListaDeEstudantes.resx">
+      <DependentUpon>FormListaDeEstudantes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenuPrincipal.resx">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
