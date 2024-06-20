@@ -63,9 +63,9 @@ namespace GestorDeEstudantesT6.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Personagem_sprite1 {
+        internal static System.Drawing.Bitmap user {
             get {
-                object obj = ResourceManager.GetObject("Personagem_sprite1", resourceCulture);
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

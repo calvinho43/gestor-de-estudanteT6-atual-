@@ -1,6 +1,6 @@
 ﻿namespace GestorDeEstudantesT6
 {
-    partial class Login_Form
+    partial class LoginForm
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -51,11 +51,11 @@
             // 
             // pictureBoxUsuario
             // 
-            this.pictureBoxUsuario.Image = global::GestorDeEstudantesT6.Properties.Resources.Personagem_sprite1;
+            this.pictureBoxUsuario.Image = global::GestorDeEstudantesT6.Properties.Resources.user;
             this.pictureBoxUsuario.Location = new System.Drawing.Point(115, 105);
             this.pictureBoxUsuario.Name = "pictureBoxUsuario";
-            this.pictureBoxUsuario.Size = new System.Drawing.Size(122, 111);
-            this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxUsuario.Size = new System.Drawing.Size(116, 120);
+            this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsuario.TabIndex = 1;
             this.pictureBoxUsuario.TabStop = false;
             // 
@@ -86,7 +86,7 @@
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(163, 20);
             this.textBoxUsuario.TabIndex = 4;
-            this.textBoxUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
+            this.textBoxUsuario.Text = "admin";
             // 
             // textBoxSenha
             // 
@@ -94,8 +94,8 @@
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(163, 20);
             this.textBoxSenha.TabIndex = 5;
+            this.textBoxSenha.Text = "admin";
             this.textBoxSenha.UseSystemPasswordChar = true;
-            this.textBoxSenha.WordWrap = false;
             // 
             // buttonLogin
             // 
@@ -119,7 +119,7 @@
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // Login_Form
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,9 +132,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBoxUsuario);
             this.Controls.Add(this.label1);
-            this.Name = "Login_Form";
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SGA - Acessar";
+            this.Text = "SGA - Bem Vindo!";
             this.Load += new System.EventHandler(this.Login_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).EndInit();
             this.ResumeLayout(false);

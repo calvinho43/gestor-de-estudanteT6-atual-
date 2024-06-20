@@ -12,7 +12,7 @@ namespace GestorDeEstudantesT6
     {
         private MySqlConnection conexao =
             new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=sga_estudantes_bd_t6");
-
+       
         public MySqlConnection getConexao
         {
             get
@@ -20,13 +20,15 @@ namespace GestorDeEstudantesT6
                 return conexao;
             }
         }
-        public void abirConexao()
+
+        public void abrirConexao()
         {
             if (conexao.State == ConnectionState.Closed)
             {
                 conexao.Open();
             }
         }
+
         public void fecharConexao()
         {
             if (conexao.State == ConnectionState.Open)
@@ -34,7 +36,5 @@ namespace GestorDeEstudantesT6
                 conexao.Close();
             }
         }
-
-
     }
 }
