@@ -29,5 +29,7 @@ namespace GestorDeEstudantesT6
                 pictureBoxFoto.Image = Image.FromFile(selecionarImagem.FileName);
             }
         }
+
+
     }
 }

@@ -65,6 +65,7 @@
             this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
             this.alunosToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.alunosToolStripMenuItem.Text = "Alunos";
+            this.alunosToolStripMenuItem.Click += new System.EventHandler(this.alunosToolStripMenuItem_Click);
             // 
             // cadastrarAlunoToolStripMenuItem
             // 
@@ -91,6 +92,7 @@
             this.editarRemoverAlunosToolStripMenuItem.Name = "editarRemoverAlunosToolStripMenuItem";
             this.editarRemoverAlunosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.editarRemoverAlunosToolStripMenuItem.Text = "Editar/Remover Alunos";
+            this.editarRemoverAlunosToolStripMenuItem.Click += new System.EventHandler(this.editarRemoverAlunosToolStripMenuItem_Click);
             // 
             // gerenciarAlunosToolStripMenuItem
             // 

@@ -28,5 +28,17 @@ namespace GestorDeEstudantesT6
             FormListaDeEstudantes listaDeEstudantes = new FormListaDeEstudantes();
             listaDeEstudantes.Show();
         }
+
+        private void alunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editarRemoverAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAtualizarApagarAlunos formAtualizarApagarAlunos =  new FormAtualizarApagarAlunos();
+          ///  formAtualizarApagarAlunos.textBoxId.Text = ///
+            formAtualizarApagarAlunos.Show();
+        }
     }
 }
